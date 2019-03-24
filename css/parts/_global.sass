@@ -1,0 +1,104 @@
+$cs-blue: #34495E
+$cs-lblue: lighten($cs-blue, 10%)
+$cs-dublue: #304254
+$cs-dblue: #2C3E50
+
+*::selection
+  background-color: transparentize($fl-green,0.5)
+
+html
+  max-width: 100vw
+  overflow-x: hidden
+body
+  width: calc(100vw - 0px)
+  min-width: calc(100vw - 0px)
+  max-width: calc(100vw - 0px) !important
+  min-height: 100vh
+
+  overflow: hidden
+  overflow-x: hidden
+  overflow-y: auto
+  position: relative
+
+  font-family: 'Roboto'
+
+  background-color: $cs-blue
+
+  z-index: 1
+
+  p, h1, h2, h3, h4, h5, h6, a, li
+
+    margin: 0
+    padding: 0
+    line-height: 2ex
+
+    color: $white
+
+    text-decoration: none
+    text-transform: none
+
+  ul
+    margin: 0
+    padding: 0
+
+  button, input, textarea
+    outline: 0
+    border: 0
+    &:active, &:focus
+      outline: 0
+      border: 0
+
+  input[type="submit"]
+    width: 100%
+    padding: 10px
+    background-color: $cs-lblue
+    color: $white
+
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2)
+
+    &:hover
+      background-color: darken($cs-lblue, 3%)
+
+    &:active
+      transition: 0.15s linear
+      background-color: lighten($cs-lblue, 3%)
+
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1)
+
+@media (min-width: 1250px)
+  .container
+    padding: 0px 40px
+
+
+body
+
+  .container
+    width: 100%
+    max-width: 1250px
+    min-height: 75vh
+
+    background-color: $cs-dblue
+
+    padding: 0px 0px 0px 0px
+    margin: auto
+
+    box-shadow: 0px 2px 8px 2px rgba(0,0,0,0.2)
+    z-index: 2
+
+  .box
+    width: 100%
+    min-height: 10px
+
+    display: block
+    background-color: $cs-blue
+    margin-bottom: 20px
+    box-sizing: border-box
+
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.2)
+
+    z-index: 3
+
+    &.pad
+      padding: 15px
+    &.npad
+      padding: 0px
